@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  
+}
+
+li {
+  height: 150px;
+  line-height: 150px;
+  padding: 0px 50px 0px 120px;
+  border-bottom: 2px solid #fff;
+  background-color: #4a4a4a;
+  background-image: url('no_checked.png');
+  background-repeat: no-repeat;
+  background-position: 60px;
+}
+
+li:hover {
+  background-color: #6e6e6e;
+}
+
+li.concluido {
+  background-color: #27ae60;
+  background-image: url('checked.png');
+  background-repeat: no-repeat;
+  background-position: 60px;
+}
+
+li.concluido:hover {
+  background-color: #52be7f;
+}
+
+a {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  background-image: url('seta.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+}
