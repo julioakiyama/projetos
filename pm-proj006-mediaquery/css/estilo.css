@@ -1,0 +1,63 @@
+body {
+    width: auto;
+    text-align: center;
+}
+
+header img {
+    width: 213px;
+    height: 40px;
+    margin: 60px auto;
+}
+
+.imagens {
+    width: 300px;
+    margin: 0 auto;
+    
+}
+
+.imagens figure img {
+    width: 300px;
+    height: 169px;
+}
+
+.imagens figure {
+    margin: 0;
+    width: 300px;
+    
+}
+
+figcaption {
+    max-width: 300px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #4a4a4a;
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 0 50px 0;
+    text-align: left;
+}
+
+@media screen and (min-width: 620px){
+    .imagens {
+        width: 640px;
+        height: auto;
+        
+    }
+    
+    .imagens figure {
+        width: 300px;
+        float: left;
+        margin-right: 20px;     
+}
+    
+@media screen and (min-width: 950px){
+    .imagens {
+        width: 960px;
+        height: auto;
+        
+    }
+    
+    .imagens figure {
+        width: 300px;
+        float: left;
+        margin-right: 20px;     
+}
