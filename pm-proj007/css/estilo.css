@@ -279,6 +279,9 @@ button:hover {
         flex-direction: column;
         align-items: center;
     }
+    .chamada_subtitulo {
+        font-size: 26px;
+    }
 }
 
 @media screen and (max-width: 481px){
@@ -295,8 +298,26 @@ button:hover {
     
     .borda {
         border: 1px solid #ff3b80;
+    }
+    
+    .chamada_subtitulo {
+    font-size: 26px;
+    }
 }
 
+@media screen and (max-width: 481px){
+    .conheca_titulo {
+        font-size: 30px;
+    }
+    
+    .chamada_titulo {
+        font-size: 40px;
+    }
+    
+    .chamada_subtitulo {
+        font-size: 24px;
+    }
+}
 
 
 
