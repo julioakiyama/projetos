@@ -37,8 +37,6 @@ header nav a {
     display: flex;
     padding: 5px 20px;
     margin-right: 60px;
-
-    
 }
 
 header nav a:hover {
