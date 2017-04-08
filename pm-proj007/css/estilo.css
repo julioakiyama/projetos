@@ -3,9 +3,9 @@ body {
 }
 
 .wrapper {
-	width: 100vw;
+	width:960px;
     height: auto;
-	max-width: 60%;
+	max-width: 90%;
 	margin: 0 auto
 }
 
@@ -37,7 +37,7 @@ header nav a {
     text-decoration: none;
     display: flex;
     padding: 5px 20px;
-    margin-right: 60px;
+    margin-left: 80px;
 }
 
 header nav a:hover {
@@ -133,6 +133,7 @@ button:hover {
     font-size: 24px;
     font-weight: 300;
     line-height: 30px;
+    text-align: justify;
 }
 
 /*** SECAO DEPOIMENTOS ***/
