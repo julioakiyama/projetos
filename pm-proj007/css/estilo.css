@@ -1,7 +1,3 @@
-body {
-	font-family: 'Lato', sans-serif;
-}
-
 .wrapper {
 	width:960px;
     height: auto;
@@ -30,8 +26,9 @@ header nav {
 }
 
 header nav a {
+    font-family: 'latomedium';
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 24px;
     font-weight: 300;
     text-decoration: none;
@@ -70,6 +67,7 @@ header nav a:hover {
 }
 
 .chamada_titulo {
+    font-family: 'latomedium';
     font-size: 50px;
     font-weight: 400;
     color: #fff;
@@ -77,6 +75,7 @@ header nav a:hover {
 }
 
 .chamada_subtitulo {
+    font-family: 'latolight';
     font-size: 36px;
     font-weight: 300;
     color: #fff;
@@ -89,10 +88,10 @@ header nav a:hover {
     border: none; 
     padding: 20px;
     color: #fff;
+    font-family: 'latolight';
     font-size: 36px;
     font-weight: 300;
     line-height: 36px;
-    font-family: 'Lato', sans-serif !important;
     box-shadow: 0px 6px 2px #952c65;
     cursor: pointer;
 }
@@ -124,12 +123,14 @@ button:hover {
 }
 
 .conheca_titulo {
+    font-family: 'latomedium';
     margin: 0;
     font-size: 36px;
     font-weight: 400;
 }
 
 .conheca_texto {
+    font-family: 'latolight';
     font-size: 24px;
     font-weight: 300;
     line-height: 30px;
@@ -157,12 +158,14 @@ button:hover {
 }
 
 .conteudo_depoimentos blockquote {
+    font-family: 'latolight';
     font-size: 24px;
     font-weight: 300;
     text-align: center;
 }
 
 .name {
+    font-family: 'latomedium';
     font-size: 24px;
     font-weight: 400;
 }
@@ -198,6 +201,7 @@ button:hover {
 .convite input[type=email] {
     border: none;
     background-color: transparent;
+    font-family: 'latoregular';
     font-size: 24px;
     line-height: 24px;
     font-weight: 400;
@@ -209,6 +213,7 @@ button:hover {
 /***SECAO FOOTER ***/
 
 #footer {
+    font-family: 'latolight';
     background-color: #2a0157;
     color: #fff;
     font-size: 18px;
