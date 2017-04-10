@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Lato-Light';
+    src: url("../fonts/Lato-Light.ttf");
+}
+    
+@font-face {
+    font-family: 'Lato-Medium';
+    src: url("../fonts/Lato-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url("../fonts/Lato-Regular.ttf");    
+}
+
 body {
     -webkit-font-smoothing: antialiased;
 }
@@ -30,10 +45,9 @@ header nav {
 }
 
 header nav a {
-    font-family: 'latoregular';
+    font-family: 'Lato-Regular', sans-serif;
     color: #fff;
     font-size: 20px;
-    font-weight: 400;
     line-height: 24px;
     text-decoration: none;
     display: flex;
@@ -71,7 +85,7 @@ header nav a:hover {
 }
 
 .chamada_titulo {
-    font-family: 'latomedium';
+    font-family: 'Lato-Medium', sans-serif;
     font-weight: 500;
     font-size: 50px;
     color: #fff;
@@ -79,7 +93,7 @@ header nav a:hover {
 }
 
 .chamada_subtitulo {
-    font-family: 'latolight';
+    font-family: 'Lato-light', sans-serif;
     font-weight: 300;
     font-size: 36px;
     color: #fff;
@@ -92,8 +106,7 @@ header nav a:hover {
     border: none; 
     padding: 20px;
     color: #fff;
-    font-family: 'latolight';
-    font-weight: 300;
+    font-family: 'Lato-Light', sans-serif;
     font-size: 36px;
     line-height: 36px;
     box-shadow: 0px 6px 2px #952c65;
@@ -127,15 +140,14 @@ button:hover {
 }
 
 .conheca_titulo {
-    font-family: 'latomedium';
+    font-family: 'Lato-Medium', sans-serif;
     font-weight: 500;
     margin: 0;
     font-size: 36px;
 }
 
 .conheca_texto {
-    font-family: 'latolight';
-    font-weight: 300;
+    font-family: 'Lato-Light', sans-serif;
     font-size: 24px;
     line-height: 30px;
     text-align: justify;
@@ -162,14 +174,14 @@ button:hover {
 }
 
 .conteudo_depoimentos blockquote {
-    font-family: 'latolight';
+    font-family: 'Lato-Light', sans-serif;
     font-weight: 300;
     font-size: 24px;
     text-align: center;
 }
 
 .name {
-    font-family: 'latomedium';
+    font-family: 'Lato-Medium', sans-serif;
     font-weight: 500;
     font-size: 24px;
 }
@@ -205,7 +217,7 @@ button:hover {
 .convite input[type=email] {
     border: none;
     background-color: transparent;
-    font-family: 'latoregular';
+    font-family: 'Lato-Regular', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 24px;
@@ -217,7 +229,7 @@ button:hover {
 /***SECAO FOOTER ***/
 
 #footer {
-    font-family: 'latolight';
+    font-family: 'Lato-Light', sans-serif;
     font-weight: 300;
     background-color: #2a0157;
     color: #fff;
