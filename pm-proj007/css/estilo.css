@@ -1,3 +1,7 @@
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
 .wrapper {
 	width:960px;
     height: auto;
@@ -26,11 +30,11 @@ header nav {
 }
 
 header nav a {
-    font-family: 'latomedium';
+    font-family: 'latoregular';
     color: #fff;
     font-size: 20px;
+    font-weight: 400;
     line-height: 24px;
-    font-weight: 300;
     text-decoration: none;
     display: flex;
     padding: 5px 20px;
@@ -68,16 +72,16 @@ header nav a:hover {
 
 .chamada_titulo {
     font-family: 'latomedium';
+    font-weight: 500;
     font-size: 50px;
-    font-weight: 400;
     color: #fff;
     margin: 0;
 }
 
 .chamada_subtitulo {
     font-family: 'latolight';
-    font-size: 36px;
     font-weight: 300;
+    font-size: 36px;
     color: #fff;
     margin: 10px 0;   
 }
@@ -89,8 +93,8 @@ header nav a:hover {
     padding: 20px;
     color: #fff;
     font-family: 'latolight';
-    font-size: 36px;
     font-weight: 300;
+    font-size: 36px;
     line-height: 36px;
     box-shadow: 0px 6px 2px #952c65;
     cursor: pointer;
@@ -124,15 +128,15 @@ button:hover {
 
 .conheca_titulo {
     font-family: 'latomedium';
+    font-weight: 500;
     margin: 0;
     font-size: 36px;
-    font-weight: 400;
 }
 
 .conheca_texto {
     font-family: 'latolight';
-    font-size: 24px;
     font-weight: 300;
+    font-size: 24px;
     line-height: 30px;
     text-align: justify;
 }
@@ -159,15 +163,15 @@ button:hover {
 
 .conteudo_depoimentos blockquote {
     font-family: 'latolight';
-    font-size: 24px;
     font-weight: 300;
+    font-size: 24px;
     text-align: center;
 }
 
 .name {
     font-family: 'latomedium';
+    font-weight: 500;
     font-size: 24px;
-    font-weight: 400;
 }
 
 /*** SECAO CONVITE ***/
@@ -202,9 +206,9 @@ button:hover {
     border: none;
     background-color: transparent;
     font-family: 'latoregular';
+    font-weight: 400;
     font-size: 24px;
     line-height: 24px;
-    font-weight: 400;
     color: #4a4a4a;
     width: 100%;
     padding: 10px;
@@ -214,11 +218,11 @@ button:hover {
 
 #footer {
     font-family: 'latolight';
+    font-weight: 300;
     background-color: #2a0157;
     color: #fff;
     font-size: 18px;
     line-height: 18px;
-    font-weight: 300;
     letter-spacing: 0.5px;
     padding: 20px;
     border-top: 3px solid #fff;
