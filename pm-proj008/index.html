@@ -27,7 +27,7 @@
                         <i class="fa fa-area-chart" aria-hidden="true"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="selecionado">
                         <i class="fa fa-signal" aria-hidden="true"></i> Base Stations</a>
                 </li>
                 <li>
@@ -42,7 +42,7 @@
             <section id="menu">
                 <nav>
                     <ul>
-                        <li><a href="">Account</a></li>
+                        <li ><a  href="" class="ativo">Account</a></li>
                         <li><a href="">Billing</a></li>
                     </ul>
                 </nav>
@@ -50,21 +50,27 @@
 
             <section class="formulario">
                 <form action="#" method="post">
-                   <h1>Personal Information</h1>
+                    <h1>Personal Information</h1>
                     <input class="dados" type="email" name="email" placeholder="E-mail"><br>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id nisl eget nunc molestie maximus.</p>
                     <input class="dados" type="text" name="Fname" placeholder="First Name">
                     <input class="dados" type="text" name="Lname" placeholder="Last Name">
-                    <input class="dados" type="text" name="city" placeholder="City">
+                    <select>
+                        <option>New Zealand</option>
+                        <option>United States</option>
+                        <option>Brazil</option>
+                    </select>
                     <input class="dados" type="tel" name="phone" placeholder="Telephone">
                     <h1>Password</h1>
                     <input class="dados" type="password" name="psw" placeholder="Password">
                     <input class="dados" type="password" name="Npsw" placeholder="New Password">
                     <input class="dados" type="password" name="Againpsw" placeholder="New Password Again">
                     <h1>Anythings</h1>
-                    <input type="checkbox" name="checkbox" value=""> <span> Güncelleme ve yenilikleri mail olarak almak istiyorum.</span><br>
-  <input type="checkbox" name="checkbox" value="" checked> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id nisl eget nunc molestie maximus.</span> <br>
-                <button>Save</button>
+                   
+                    <input  type="checkbox" name="checkbox" value="" class="checkbox"><span>Güncelleme ve yenilikleri mail olarak almak istiyorum.</span><br>
+                  
+                    <input type="checkbox" name="checkbox" value="" class="checkbox" checked><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id nisl eget nunc molestie maximus.</span>
+                    <button>Save</button>
 
                 </form>
             </section>
