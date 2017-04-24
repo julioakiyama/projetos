@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+
+#body:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+}
+
+#body {
+   position: fixed;
+   left: 0;
+   right: 0;
+   z-index: 0;
+   margin-left: 20px;
+   margin-right: 20px;  
+}
+
+.container {
+    display: flex;
+    width: 680px;
+    height: auto;
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 600px;
+}
+
+
+#logo {
+    color: #5e5f5f;
+    font-family: 'Avenir LT Std 85 Heavy';
+    font-size: 18px;
+    line-height: 18px;
+}
+header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+
+header ul {
+    display: flex;
+    list-style: none;
+    padding: 10px 0;
+}
+
+header ul li {
+    padding: 10px 0 10px 2px;
+    color: #2d2d2d;
+    font-family: 'Avenir LT Std 85 Heavy';
+    font-weight: 700;
+    font-size: 12px;
+}
+
+header ul li:first-child {
+    color: #9c9c9c;
+    opacity:  50%;
+}
+
+header ul li:last-child {
+    color: #9c9c9c;
+    opacity:  50%;
+}
+header ul li:after {
+    content: ">";
+    padding: 2px;
+    color: #9c9c9c;
+    font-family: 'Avenir LT Std 55 Roman';
+    font-size: 12px;
+}
+
+header ul li:nth-child(3n):after {
+    content: " ";
+}
+
+.credit-cards {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+ h2 {
+    display: block;
+    width: 350px;
+    color: #808283;
+    font-size: 16px;
+    font-family: 'Avenir LT Std 55 Roman';
+     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.credit-cards figure {
+    width: 110px;
+    height: 96px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 20px;
+    padding: 10px;
+}
+
+.credit-cards figure:first-child {
+    background-color: #f5f9fd;
+    border: 1px solid #d2e3f7;
+}
+
+.credit-cards figure figcaption {
+    color: #777879;
+    font-size: 12px;
+    font-family: 'Avenir LT Std 55 Roman';
+     padding-top: 10px;
+}
+
+.form {
+    width: 350px;
+    border-top: 1px solid #dfdfdf;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.form form {
+    width: 270px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ .form form input {
+    width: 270px;
+    height: 40px;
+    margin: 10px auto;
+    padding-left: 10px;
+}
+
+.form form input:nth-child(3n) {
+    width: 160px;
+    margin-right: 15px;
+}
+
+.form form input:nth-child(4n){
+    width: 95px;
+}
+
+.form form input.checkbox {
+    width: 15px;
+    height: 15px;
+    margin:  20px 0;
+}
+
+.form form label {
+    font-family: 'Avenir LT Std 55 Roman';
+    font-size: 14px;
+    color: #777879;
+    margin-right: 120px;
+}
+.form form button {
+    width: 290px;
+    height: 45px;
+    background-color: #8cd736;
+    color: #fff;
+    font-family: 'Avenir LT Std 55 Roman';
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 30px 0; 
+}
+
+.lateral {
+    display: flex;
+    width: 300px;
+    height: 600px;
+    
+}
+
+.lateral p {
+    color: #777879;
+    width: 25px;
+    height: 25x;
+    position: relative;
+    left: 265px;
+    top: -20px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.lateral aside {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.lateral aside .products {
+    width: 290px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.lateral aside .products img {
+    margin: 10px 10px 10px 0;
+        
+}
+
+.lateral aside .products h3 span {
+    float: right;
+}
+
+.lateral aside .products h3 {
+    width: 230px;
+    font-family: 'Avenir LT Std 85 Heavy';
+    font-size: 12px;
+    color: #777879;
+    padding-top: 15px;
+}
+
+.lateral aside .products h4 {
+    font-family: 'Avenir LT Std 35 Light Oblique';
+    font-size: 10px;
+    color: #9c9c9c;
+}
+
+.lateral aside .products h5 {
+    font-family: 'Avenir LT Std 85 Heavy';
+    font-size: 10px;
+    color: #9c9c9c;
+}
+
+.lateral footer ul{
+    margin-top: 130px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.lateral footer ul li {
+    list-style: none; 
+    color: #777879;
+    font-family: 'Avenir LT Std 55 Roman';
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.lateral footer ul li:nth-child(4n) {
+    font-family: 'Avenir LT Std 85 Heavy';
+}
+
+.lateral footer ul li:nth-child(3n){
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.lateral footer ul li span {
+    float: right;
+}

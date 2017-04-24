@@ -1,0 +1,26 @@
+
+@font-face {
+font-family: 'Avenir LT Std 85 Heavy';
+font-style: normal;
+font-weight: normal;
+src: url(AvenirLTStd-Heavy.otf);
+src: local('Avenir LT Std 85 Heavy'), url('AvenirLTStd-Heavy.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Avenir LT Std 55 Roman';
+font-style: normal;
+font-weight: normal;
+src: url(AvenirLTStd-Roman.otf);
+src: local('Avenir LT Std 55 Roman'), url('AvenirLTStd-Roman.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Avenir LT Std 35 Light Oblique';
+font-style: normal;
+font-weight: normal;
+src: url(AvenirLTStd-LightOblique.otf);
+src: local('Avenir LT Std 35 Light Oblique'), url('AvenirLTStd-LightOblique.woff') format('woff');
+}
+
