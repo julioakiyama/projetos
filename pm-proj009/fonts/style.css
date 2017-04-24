@@ -3,7 +3,8 @@
 font-family: 'Avenir LT Std 85 Heavy';
 font-style: normal;
 font-weight: normal;
-src: url(AvenirLTStd-Heavy.otf);
+src: url(AvenirLTStd-Heavy.otf), url('AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'), 
+	     url('AvenirLTStd-Heavy.woff') format('woff'), url('AvenirLTStd-Heavy.ttf')  format('truetype'), url('AvenirLTStd-Heavy.svg#AvenirLTStd-Heavy') format('svg');
 src: local('Avenir LT Std 85 Heavy'), url('AvenirLTStd-Heavy.woff') format('woff');
 }
 
@@ -11,7 +12,7 @@ src: local('Avenir LT Std 85 Heavy'), url('AvenirLTStd-Heavy.woff') format('woff
 font-family: 'Avenir LT Std 55 Roman';
 font-style: normal;
 font-weight: normal;
-src: url(AvenirLTStd-Roman.otf);
+src: url(AvenirLTStd-Roman.otf), url('AvenirLTStd-Roman.eot?#iefix') format('embedded-opentype'),  url('AvenirLTStd-Roman.otf')  format('opentype'), url('AvenirLTStd-Roman.svg#AvenirLTStd-Roman') format('svg');
 src: local('Avenir LT Std 55 Roman'), url('AvenirLTStd-Roman.woff') format('woff');
 }
 
@@ -20,7 +21,8 @@ src: local('Avenir LT Std 55 Roman'), url('AvenirLTStd-Roman.woff') format('woff
 font-family: 'Avenir LT Std 35 Light Oblique';
 font-style: normal;
 font-weight: normal;
-src: url(AvenirLTStd-LightOblique.otf);
+src: url(AvenirLTStd-LightOblique.otf), url('AvenirLTStd-LightOblique.eot?#iefix') format('embedded-opentype'),  
+	     url('AvenirLTStd-LightOblique.woff') format('woff'), url('AvenirLTStd-LightOblique.ttf')  format('truetype'), url('AvenirLTStd-LightOblique.svg#AvenirLTStd-LightOblique') format('svg');
 src: local('Avenir LT Std 35 Light Oblique'), url('AvenirLTStd-LightOblique.woff') format('woff');
 }
 
