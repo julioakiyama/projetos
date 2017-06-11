@@ -1,0 +1,165 @@
+html,
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #f5f8f9;
+    height: 100%;
+}
+
+.content {
+    height: 1400px;    
+}
+
+aside {
+    background-color: #3a3c40;
+    height: 100%;
+    padding: 4% 2% 3%!important;
+    text-align: center;
+}
+
+aside img {
+    display: inline;
+}
+
+aside h1 {
+    color: #f5a623;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+aside h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+aside .button {
+    background-color: #f5a623;
+    box-shadow: 0px 4px 0px #ab7d2c;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0px 0px 1px #333;
+    text-transform: uppercase;
+    padding: 10px 30px;
+}
+
+aside ul {
+    margin-top: 20px;
+    padding:  0;
+}
+
+aside ul li {
+    display: inline;
+    font-size: 30px;
+    color: #fff;
+}
+
+aside ul li i {
+    color: #fff;
+    margin: 5px 5px 20px;
+}
+
+aside .knowlodge {
+    text-align: left;
+    margin-top: 50px;
+}
+
+aside .knowlodge h3 {
+    color: #eeeeee;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+aside .knowlodge small {
+    color: #8fa4af;
+    font-size: 1.5rem;
+    
+}
+
+.progress {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    text-align: right;
+    background-color: #efb75a;
+    color: #3a3c40;
+    margin-bottom: 10px;
+}
+
+.main {
+    padding: 30px 50px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #e1e1e1;
+    height: 100%;
+}
+
+.main .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d0021b;
+    border-bottom: 1px solid #d0021b;
+    margin-top: 30px;
+}
+
+.main .title i {
+    padding: 0 10px 5px 0;
+}
+
+.main .text {
+    font-size: 1.7rem;
+    color:#666666;
+    margin-bottom: 30px;
+}
+
+.main .subtitle {
+    color: #000;
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.main .local {
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.main .data {
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin: 0 0 10px;
+}
+
+
+@media screen and (max-width: 995px){
+    aside {
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
