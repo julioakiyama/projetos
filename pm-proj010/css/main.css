@@ -5,14 +5,20 @@ body {
     height: 100%;
 }
 
+.clearfix::after { 
+   content: "";
+   display: table; 
+   clear: both;
+}
+
 .content {
-    height: 1400px;    
+    height: 100%;    
 }
 
 aside {
     background-color: #3a3c40;
     height: 100%;
-    padding: 4% 2% 3%!important;
+    padding: 5% 3% !important;
     text-align: center;
 }
 
@@ -89,7 +95,7 @@ aside .knowlodge small {
 }
 
 .main {
-    padding: 30px 50px;
+    padding: 30px 50px 0;
     background-color: #fff;
     box-shadow: 1px 1px 1px #e1e1e1;
     height: 100%;
@@ -110,7 +116,7 @@ aside .knowlodge small {
 .main .text {
     font-size: 1.7rem;
     color:#666666;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .main .subtitle {
@@ -135,11 +141,7 @@ aside .knowlodge small {
 }
 
 
-@media screen and (max-width: 995px){
-    aside {
-        height: auto;
-    }
-}
+
 
 
 
