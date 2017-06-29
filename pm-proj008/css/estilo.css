@@ -213,7 +213,7 @@ button {
 
 
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 756px){
     .container {
         flex-direction: column;
     }
