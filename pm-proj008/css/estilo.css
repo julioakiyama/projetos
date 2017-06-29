@@ -138,21 +138,14 @@ form h1 {
 }
 
 form p {
-    font-size: 12px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 400;
-    color: #000;   
-    margin-top: -10px;
-    margin-bottom: 15px;
-}
-
-form p {
     font-size: 14px;
     line-height: 14px;
     font-family: 'Arial', sans-serif;
     font-weight: 400;
     color: #161616;  
     margin-left: 25px;
+    margin-top: -10px;
+    margin-bottom: 15px;
 }
 
 .dados {
@@ -178,7 +171,7 @@ select option {
     margin-bottom: 10px;
 }
 
-.checkbox + label {
+ .checkbox + label {
     font-size: 14px;
     font-family: 'Arial', sans-serif;
     font-weight: 400;
@@ -220,7 +213,27 @@ button {
 
 
 
+@media screen and (max-width: 480px){
+    .container {
+        flex-direction: column;
+    }
+    
+    aside ul,
+    aside ul li,
+    aside ul li a,
+    form {
+    width: 100%;
+    }  
+    
+    .formulario {
+    margin-left: 0px;
+    }
+    
+    form {
+    padding: 3%;
+}
 
+}
 
 
 
