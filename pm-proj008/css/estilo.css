@@ -235,7 +235,12 @@ button {
 
 }
 
-
+@media screen and (max-width: 450px){
+    .checkbox + label {
+        font-size: 12px;
+        width: 275px;
+    }
+}
 
 
 
