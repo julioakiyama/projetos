@@ -1,0 +1,148 @@
+$gray: #4a4a4a;
+$white: #fff;
+$black: #000;
+$primary-color: #3498db;
+$secondary-color: #34495e;
+$terciary-color: #27ae60;
+$terciary-color-light: lighten($terciary-color, 5%);
+$font-size: 100px;
+$font-family: 'Oswald', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: $black;
+  padding: 50px;
+}
+
+label {
+  color: $white;
+  font-size: 20px;
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  padding: 20px;
+  font-family: $font-family;
+  font-weight: 200;
+}
+
+.height {
+  background-color: $primary-color;
+}
+
+.kg {
+  background-color: $secondary-color;
+}
+
+form {
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  height: 150px;
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: $font-size;
+  color: $white;
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+input::placeholder {
+  color: $white;
+  opacity: 0.2;
+  font-family: $font-family;
+  font-weight: 300;
+}
+
+button {
+  background-color: $terciary-color;
+  height: 150px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 6px 0px #245838;
+  border-style: none;
+  font-size: 72px;
+  font-family: $font-family;
+  font-weight: 300;
+  color: $white;
+  text-shadow: 1px 1px 20px $black;
+  cursor: pointer;
+  &:hover {
+    background-color: $terciary-color-light;
+
+  }
+}
+
+.btn-box{
+  background-color: $white;
+  padding: 15px 15px 21px;
+}
+
+
+#result {
+ padding: 20px 50px;
+ text-align: center;
+  cursor: pointer;
+}
+
+
+img {
+  float: left;
+  margin: 20px;
+  cursor: pointer;
+}
+
+h1,
+p {
+  font-weight: 300;
+  font-family: $font-family;
+  color: $gray;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
