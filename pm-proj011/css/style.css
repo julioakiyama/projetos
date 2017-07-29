@@ -84,8 +84,7 @@ button:hover {
 
 img {
   float: left;
-  margin: 20px;
-  margin-left: auto;
+  margin-top: 20px;
   
 }
 
@@ -95,6 +94,7 @@ p {
   font-family: "Oswald", sans-serif;
   color: #4a4a4a;
   margin: 5px;
+  text-align: center;
 }
 
 h1 {
