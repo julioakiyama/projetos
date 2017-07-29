@@ -1,6 +1,6 @@
 
 
-document.querySelector('#result').classList.add('hidden');
+document.querySelector('#result').style.display = 'none';
 //var height, weight, calculate, result, msg;
 
 
@@ -13,6 +13,7 @@ var calcBMI = function() {
   var calculate = weight / (height * 2);
   var result = calculate.toFixed(2);
   var msg = document.querySelector('#result');
+  
  
   if (result <= 16) {
     msg.innerHTML = "<img src= 'img/shape.png'>";
@@ -37,13 +38,13 @@ var calcBMI = function() {
     msg.innerHTML += '<h1>' + result + '</h1>';
     msg.innerHTML += '<p>Saudavél</p>'; 
     document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    document.querySelector('#result').style.display = 'flex';
   } else if (result > 25 && result <= 30) {
     msg.innerHTML = "<img src= 'img/shape.png'>";
     msg.innerHTML += '<h1>' + result + '</h1>';
     msg.innerHTML += '<p>Sobre Peso</p>'; 
     document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    document.querySelector('#result').style.display = 'flex';
   } else if (result > 30 && result <= 35) {
     msg.innerHTML = "<img src= 'img/shape.png'>";
     msg.innerHTML += '<h1>' + result + '</h1>';

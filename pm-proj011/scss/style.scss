@@ -17,7 +17,7 @@ $font-family: 'Oswald', sans-serif;
 
 body {
   background-color: $black;
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 label {
@@ -40,8 +40,7 @@ label {
 }
 
 form {
-  width: 500px;
-  max-width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -97,10 +96,10 @@ button {
 }
 
 
+
 img {
   float: left;
   margin: 20px;
-  cursor: pointer;
 }
 
 h1,
@@ -108,7 +107,7 @@ p {
   font-weight: 300;
   font-family: $font-family;
   color: $gray;
-  margin: 10px;
+  margin: 5px;
 }
 
 h1 {
@@ -124,9 +123,6 @@ p {
   display: none;
 }
 
-.show {
-  display: block;
-}
 
 
 
