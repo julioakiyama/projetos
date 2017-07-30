@@ -6,11 +6,9 @@ document.querySelector('#result').style.display = 'none';
 
 //calculate BMI and show the results
 var calcBMI = function() {
-  var height = document.querySelector('#height').value;
-  height = height.replace(/,/g, ".");
-  var weight = document.querySelector('#weight').value;
-  weight = weight.replace(/,/g, ".");
-  var calculate = weight / (height * 2);
+  var height = document.querySelector('#height').value.replace(/,/g, ".");
+  var weight = document.querySelector('#weight').value.replace(/,/g, ".");
+  var calculate = weight / (height * height);
   var result = calculate.toFixed(2);
   var msg = document.querySelector('#result');
   
