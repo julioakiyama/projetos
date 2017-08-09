@@ -10,57 +10,28 @@ var calcBMI = function() {
   var weight = document.querySelector('#weight').value.replace(/,/g, ".");
   var calculate = weight / (height * height);
   var result = calculate.toFixed(2);
-  var msg = document.querySelector('#result');
+  var h1 = document.querySelector('h1');
+  var p = document.querySelector('p');
+  document.querySelector('button').style.display = 'none';
+  document.querySelector('#result').style.display = 'block';
+  h1.textContent = result ; 
   
- 
   if (result <= 16) {
-    msg.innerHTML = "<img src= 'img/shape.png'>";
-    msg.innerHTML += '<h1>' + result + '</h1>';
-    msg.innerHTML += '<p>Magresa Grave</p>';
-    document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    p.textContent = 'Magresa Grave';
   } else if (result > 16 && result <= 17) {
-    msg.innerHTML = "<img src= 'img/shape.png'>";
-    msg.innerHTML += '<h1>' + result + '</h1>';
-    msg.innerHTML += '<p>Magresa Moderada</p>';
-    document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    p.textContent = 'Magresa Moderada';
   } else if (result > 17 && result <= 18.5) {
-    msg.innerHTML = "<img src= 'img/shape.png'>";
-    msg.innerHTML += '<h1>' + result + '</h1>';
-    msg.innerHTML += '<p>Magresa Leve</p>';
-    document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    p.textContent = 'Magresa Leve';
   } else if (result > 18.5 && result <= 25) {
-    msg.innerHTML = "<img src= 'img/shape.png'>";
-    msg.innerHTML += '<h1>' + result + '</h1>';
-    msg.innerHTML += '<p>Saudavél</p>'; 
-    document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    p.textContent = 'Saudavél'; 
   } else if (result > 25 && result <= 30) {
-    msg.innerHTML = "<img src= 'img/shape.png'>";
-    msg.innerHTML += '<h1>' + result + '</h1>';
-    msg.innerHTML += '<p>Sobre Peso</p>'; 
-    document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    p.textContent = 'Sobre Peso'; 
   } else if (result > 30 && result <= 35) {
-    msg.innerHTML = "<img src= 'img/shape.png'>";
-    msg.innerHTML += '<h1>' + result + '</h1>';
-    msg.innerHTML += '<p>Obeso</p>'; 
-    document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    p.textContent = 'Obeso'; 
   } else if (result > 35 && result <= 40) {
-    msg.innerHTML = "<img src= 'img/shape.png'>";
-    msg.innerHTML += '<h1>' + result + '</h1>';
-    msg.innerHTML += '<p>Obesidade Severa</p>'; 
-    document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    p.textContent = 'Obesidade Severa'; 
   } else if (result > 40) {
-    msg.innerHTML = "<img src= 'img/shape.png'>";
-    msg.innerHTML += '<h1>' + result + '</h1>';
-    msg.innerHTML += '<p>Obesidade Mórbida</p>'; 
-    document.querySelector('button').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
+    p.textContent = 'Obesidade Mórbida'; 
   }
 };
 
