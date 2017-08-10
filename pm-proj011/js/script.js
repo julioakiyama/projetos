@@ -36,14 +36,14 @@ var calcBMI = function() {
 };
 
 
-//checking the inputs for undefined, '',NaN, null
+//checking the inputs for undefined, '', null
 function checkInput() {
   var inputText = document.getElementsByTagName('input');
-  var letters = /^[a-zA-Z]+$/;
-  //var letters = /^[a-zA-Z!@#$%\^&*)(+=_-]*$/;
+  //var letters = /^[a-zA-Z]+$/;
+  var letters = /^[a-zA-Z!@#$%\^&*)(+=_-]*$/;
   
   for (var i = 0; i < inputText.length; i++) {
-    if ((inputText[i].value === '') || (inputText[i].value <= 0) || (inputText[i].value.match(letters))) {
+    if ((inputText[i].value === '') || (inputText[i].value <= 0) || (inputText[i].value.match(letters)) || (isNaN(inputText[i].value.replace(/,/g, ".")))) {
       inputText[i].focus();
       
       document.querySelector('button').classList.remove('hidden');
