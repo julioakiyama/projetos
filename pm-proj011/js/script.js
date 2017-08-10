@@ -1,7 +1,7 @@
-
-
-document.querySelector('#result').style.display = 'none';
+document.querySelector('#result').classList.add('hidden');
 //var height, weight, calculate, result, msg;
+
+document.querySelector('button').addEventListener('click', checkInput);
 
 
 //calculate BMI and show the results
@@ -10,11 +10,11 @@ var calcBMI = function() {
   var weight = document.querySelector('#weight').value.replace(/,/g, ".");
   var calculate = weight / (height * height);
   var result = calculate.toFixed(2);
-  var h1 = document.querySelector('h1');
+  var msg = document.querySelector('h1');
   var p = document.querySelector('p');
-  document.querySelector('button').style.display = 'none';
-  document.querySelector('#result').style.display = 'block';
-  h1.textContent = result ; 
+  document.querySelector('button').classList.add('hidden');
+  document.querySelector('#result').classList.remove('hidden');
+  msg.textContent = result ; 
   
   if (result <= 16) {
     p.textContent = 'Magresa Grave';
@@ -46,8 +46,8 @@ function checkInput() {
     if ((inputText[i].value === '') || (inputText[i].value <= 0) || (inputText[i].value.match(letters))) {
       inputText[i].focus();
       
-      document.querySelector('button').style.display = 'block';
-      document.querySelector('#result').style.display = 'none';
+      document.querySelector('button').classList.remove('hidden');
+      document.querySelector('#result').classList.add('hidden');
       return false;
     }  else {
         calcBMI();
@@ -68,16 +68,9 @@ document.querySelector('#result').addEventListener('click', function(){
   if (inputWeight.value !== ''){
     inputWeight.value = 'Makers';
   }
-  document.querySelector('button').style.display = 'block';
-  document.querySelector('#result').style.display = 'none';
+  document.querySelector('button').classList.remove('hidden');
+  document.querySelector('#result').classList.add('hidden');
 });
-
-
-
-document.querySelector('button').addEventListener('click', checkInput);
-
-
-
 
 
 
