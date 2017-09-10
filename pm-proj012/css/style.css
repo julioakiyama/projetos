@@ -125,7 +125,7 @@ button.equal:active {
   background-image: url(" ../img/br-us.png");
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .key {
     display: flex;
     flex-wrap: wrap;
