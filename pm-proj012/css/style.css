@@ -5,8 +5,12 @@
 }
 
 body {
-  background-color: #000;
-  padding-top: 50px;
+  background: #C33764;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #1D2671, #C33764);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #1D2671, #C33764);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .wrap {
@@ -18,7 +22,7 @@ body {
 .key {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 100px);
+  grid-auto-rows: minmax(20vh, auto);
 }
 
 form {
@@ -26,26 +30,36 @@ form {
   padding: 7px;
 }
 
-button[type="button"],
-#display {
+button,
+input[type='text'] {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
 
-#display {
+input[type='text'] {
   width: 100%;
-  height: 130px;
+  height: 20vh;
   text-align: right;
   font-size: 2.5rem;
   background-color: #202020;
   border-style: none;
   outline: none;
-  color: white;
   padding: 30px;
 }
+input[type='text']::placeholder {
+  color: #fff;
+  opacity: 1;
+}
 
-button[type="button"],
-button[type="image"] {
+input[type=text].input {
+  color: white;
+}
+
+input[type=text].result {
+  color: #27ae60;
+}
+
+button {
   border-style: none;
   font-size: 3.25rem;
   border: 1px solid #cdcccc;
@@ -53,31 +67,74 @@ button[type="image"] {
   outline: none;
 }
 
-button[type="button"] {
+button.digit,
+button.clearMem {
   color: #000;
   background-color: #d8d8d8;
   transition: .6s;
 }
-button[type="button"]:hover {
+button.digit:hover,
+button.clearMem:hover {
   background-color: #cbcbcb;
 }
-button[type="button"]:active {
+button.digit:active,
+button.clearMem:active {
   transition: .1s;
   box-shadow: inset 1px 1px 30px #202020;
-  border: none;
+  border: 1px solid #cdcccc;
 }
 
-button[type="image"] {
-  background-color: #4a90e2;
-  background-image: url(" ../img/us-br.png");
+button.equal {
+  line-height: 1;
   background-repeat: no-repeat;
   background-position: center;
+  transition: .6s;
 }
-button[type="image"]:active {
+button.equal:active {
   transition: .1s;
   box-shadow: inset 1px 1px 30px #202020;
-  border: none;
+  border: 1px solid #cdcccc;
 }
 
+.select {
+  background-color: #4a90e2;
+}
+.select:hover {
+  background-color: #2275d7;
+}
+
+.convert {
+  background-color: #f98611;
+}
+.convert:hover {
+  background-color: #d26c05;
+}
+
+.converted {
+  background-color: #27ae60;
+}
+.converted:hover {
+  background-color: #1e8449;
+}
+
+.br-us {
+  background-image: url(" ../img/us-br.png");
+}
+
+.us-br {
+  background-image: url(" ../img/br-us.png");
+}
+
+@media screen and (max-width: 500px) {
+  .key {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  button {
+    width: calc(100% / 3);
+    height: 20vh;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
