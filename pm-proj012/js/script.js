@@ -2,8 +2,8 @@ const $visor = document.querySelector('input[type="text"]');
 const $buttonsNumber = document.querySelectorAll('.digit');
 const $buttonClear = document.querySelector('.clearMem');
 const $buttonEqual = document.querySelector('.equal');
-let value = 0;
-let displayValue = '';
+let $value = 0;
+let $displayValue = '';
 
 Array.prototype.forEach.call($buttonsNumber, function(button) {
   button.addEventListener('click', handleClickNumber, false);
@@ -13,15 +13,15 @@ $buttonClear.addEventListener('click', handleClickC, false);
 $buttonEqual.addEventListener('click', handleClickEqual, false);
 
 function handleClickNumber() {
-  value += this.value;
-  displayValue = digitsToNumber(value);
+  $value += this.value;
+  $displayValue = digitsToNumber($value);
   if ($buttonEqual.classList.contains('br-us')) {
-    $visor.value = displayValue.toLocaleString('pt-BR', {
+    $visor.value = $displayValue.toLocaleString('pt-BR', {
       style: 'currency',
       currency: 'BRL'
     });
   } else if ($buttonEqual.classList.contains('us-br')) {
-    $visor.value = displayValue.toLocaleString('en-US', {
+    $visor.value = $displayValue.toLocaleString('en-US', {
       style: 'currency',
       currency: 'USD'
     });
@@ -44,7 +44,7 @@ function handleClickC() {
     $buttonEqual.classList.add('select')
     console.log($visor.className);
   }
-  value = $visor.value = 0;
+  $value = $visor.value = 0;
 }
 
 function handleClickEqual() {
@@ -69,18 +69,17 @@ function handleClickEqual() {
         $buttonEqual.classList.remove('br-us');
         $buttonEqual.classList.add('us-br');
         console.log('funcao brus ' + $buttonEqual.className);
-        gotBRLToUSD(displayValue);
       } else if ($buttonEqual.classList.contains('us-br')) {
         $buttonEqual.classList.remove('us-br');
         $buttonEqual.classList.add('br-us');
-        console.log('funcaousbr');
-        gotUSDToBRL(displayValue);
+        console.log('funcao usbr');
       }
+       return gotData($displayValue);
     }
   }
 }
 
-function gotBRLToUSD(displayValue) {
+function gotData($displayValue) {
   const request = new XMLHttpRequest();
   const requestURL = 'http://api.fixer.io/latest?base=USD';
   request.open('GET', requestURL);
@@ -88,26 +87,16 @@ function gotBRLToUSD(displayValue) {
   request.onload = function () {
   const data = JSON.parse(request.responseText);
   let usd$ = data.rates.BRL;
-  const result = displayValue / usd$;
-  $visor.value = result.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
-  $visor.classList.add('result');
+    if ($buttonEqual.classList.contains('us-br')) {
+      const result = $displayValue / usd$;
+      $visor.value = result.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+      $visor.classList.add('result');
+    } else if ($buttonEqual.classList.contains('br-us')) {
+        const result = $displayValue * usd$;
+        $visor.value = result.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+        $visor.classList.add('result');
+    }
   }
-  return result;
-}
-
-function gotUSDToBRL(displayValue) {
-  const request = new XMLHttpRequest();
-  const requestURL = 'http://api.fixer.io/latest?base=USD';
-  request.open('GET', requestURL);
-  request.send();
-  request.onload = function () {
-  const data = JSON.parse(request.responseText);
-  let usd$ = data.rates.BRL;
-  const result = displayValue * usd$;
-  $visor.value = result.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-  $visor.classList.add('result');
-  }
-  return result;
 }
 
 function digitsToNumber(digits) {
