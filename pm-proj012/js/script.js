@@ -69,10 +69,12 @@ function handleClickEqual() {
         $buttonEqual.classList.remove('br-us');
         $buttonEqual.classList.add('us-br');
         console.log('funcao brus ' + $buttonEqual.className);
-        return gotBRLToUSD(displayValue);
+        gotBRLToUSD(displayValue);
       } else if ($buttonEqual.classList.contains('us-br')) {
+        $buttonEqual.classList.remove('us-br');
+        $buttonEqual.classList.add('br-us');
         console.log('funcaousbr');
-        return gotUSDToBRL(displayValue);
+        gotUSDToBRL(displayValue);
       }
     }
   }
@@ -90,6 +92,7 @@ function gotBRLToUSD(displayValue) {
   $visor.value = result.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
   $visor.classList.add('result');
   }
+  return result;
 }
 
 function gotUSDToBRL(displayValue) {
@@ -104,6 +107,7 @@ function gotUSDToBRL(displayValue) {
   $visor.value = result.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
   $visor.classList.add('result');
   }
+  return result;
 }
 
 function digitsToNumber(digits) {
