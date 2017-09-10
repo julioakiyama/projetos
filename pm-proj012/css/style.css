@@ -14,7 +14,7 @@ body {
 }
 
 .wrap {
-  width: 500px;
+  width: 960px;
   max-width: 90%;
   margin: 0 auto;
 }
@@ -27,7 +27,6 @@ body {
 
 form {
   text-align: center;
-  padding: 7px;
 }
 
 button,
