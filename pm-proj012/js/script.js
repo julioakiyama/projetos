@@ -81,7 +81,7 @@ function handleClickEqual() {
 
 function gotData($displayValue) {
   const request = new XMLHttpRequest();
-  const requestURL = 'http://api.fixer.io/latest?base=USD';
+  const requestURL = 'https://api.fixer.io/latest?base=USD';
   request.open('GET', requestURL);
   request.send();
   request.onload = function () {
