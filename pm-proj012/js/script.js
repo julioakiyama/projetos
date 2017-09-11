@@ -74,7 +74,7 @@ function handleClickEqual() {
         $buttonEqual.classList.add('br-us');
         console.log('funcao usbr');
       }
-       return gotData($displayValue);
+        gotData($displayValue);
     }
   }
 }
