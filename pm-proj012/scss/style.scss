@@ -38,7 +38,7 @@ background: linear-gradient(to bottom, #1D2671, #C33764); /* W3C, IE 10+/ Edge, 
 .key{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 20vh);
+	grid-auto-rows: minmax(20vh, auto);
 }
 
 form {

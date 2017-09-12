@@ -10,6 +10,7 @@ Array.prototype.forEach.call($buttonsNumber, function(button) {
 });
 
 $buttonClear.addEventListener('click', handleClickC, false);
+
 $buttonEqual.addEventListener('click', handleClickEqual, false);
 
 function handleClickNumber() {
