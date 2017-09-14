@@ -5,20 +5,19 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-items: center;
   align-items: center;
+  width: 100%;
   height: 100vh;
   background: #BE93C5;
-  /* old browsers */
   background: -webkit-linear-gradient(to bottom, #7BC6CC, #BE93C5);
-  /* Chrome, Safari */
+  background: -o-linear-gradient(#7BC6CC, #BE93C5);
   background: linear-gradient(to bottom, #7BC6CC, #BE93C5);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .wrap {
-  width: 960px;
+  width: 100%;
   max-width: 90%;
   margin: 0 auto;
 }
@@ -26,12 +25,13 @@ body {
 .key {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, 18vh);
+  grid-auto-rows: minmax(80px, 18vh);
 }
 
 form {
   text-align: center;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+              0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 button,

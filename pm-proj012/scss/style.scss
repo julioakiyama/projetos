@@ -22,19 +22,21 @@ $bg-converted-dark: darken($bg-converted, 10%);
 }
 
 body {
-	display: flex;
-	justify-content: center;
+	display: grid;
+	justify-items: center;
 	align-items: center;
+	width: 100%;
 	height: 100vh;
-background: #BE93C5;  /* old browsers */
-background: -webkit-linear-gradient(to bottom, #7BC6CC, #BE93C5);  /* Chrome, Safari */
-background: linear-gradient(to bottom, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #BE93C5;  /* old browsers */  /* Chrome, Safari */
+  background: -webkit-linear-gradient(#7BC6CC, #BE93C5);
+  background: -o-linear-gradient(#7BC6CC, #BE93C5);
+  background: linear-gradient(#7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ;
 
 }
 
 .wrap {
-	width: 960px;
+	width: 100%;
 	max-width: 90%;
 	margin: 0 auto;
 }
