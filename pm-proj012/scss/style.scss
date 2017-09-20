@@ -12,7 +12,8 @@ $bg-converted-dark: darken($bg-converted, 10%);
 @mixin box-shadow {
 		transition: .1s;
 		box-shadow: inset 1px 1px 30px $bg-display;
-		border: 1px solid #cdcccc;;
+		border: 1px solid #cdcccc;
+		font-size: 2.3rem;
 }
 
 *  {
@@ -44,13 +45,27 @@ body {
 .key{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-auto-rows: minmax(100px, 18vh);
+	grid-auto-rows: minmax(70px, 15vh);
 }
 
 form {
+	background-color: darken($bg-button, 10%);
+	padding: 0 10px 10px 10px;
+	border-radius: 7px;
 	text-align: center;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30),
 	            0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+span {
+	display: block;
+	font-size: .9rem;
+	letter-spacing: .5rem;
+	font-weight: 400;
+	padding: 5px;
+	color: rgba(0,0,0,0.9);
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+             0px -5px 35px rgba(255,255,255,0.3);
 }
 
 button,
@@ -61,13 +76,23 @@ input[type='text']{
 
 input[type='text'] {
 	width: 100%;
-	height: 20vh;
+	height: 15vh;
 	text-align: right;
 	font-size: 2.5rem;
 	background-color: $bg-display;
 	border-style: none;
 	outline: none;
 	padding: 30px;
+	margin-bottom: 10px;
+	box-shadow:inset rgba(0,0,0,1) 0px 1px 4px,
+	           inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
+	-webkit-box-shadow:inset rgba(0,0,0,1) 0px 1px 4px,
+	                   inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
+	-moz-box-shadow:inset rgba(0,0,0,1) 0px 1px 4px,
+	                inset rgba(225,225,225,0.3) 0px -2px 4px -2px;
+  background: -moz-linear-gradient(top, #2b464d 0%, #22373d 100%);
+	background: -webkit-linear-gradient(top, #2b464d 0%, #22373d 100%);
+	background: linear-gradient(top, #2b464d 0%, #22373d 100%);
 	&::placeholder {
 		color: #fff;
 		opacity: 1;
@@ -85,7 +110,7 @@ input[type=text].result {
 button {
 	border-style: none;
 	font-size: 3.25rem;
-	border:  1px solid #cdcccc;
+	border:  1px solid darken($bg-button, 10%);
 	cursor: pointer;
 	outline: none;
 }
@@ -135,7 +160,7 @@ button.equal {
 }
 
 .br-us {
-	background-image: url(' ../img/us-br.png')
+	background-image: url(' ../img/us-br.png');
 }
 
 .us-br {
@@ -151,6 +176,6 @@ button.equal {
 
 	button {
 		width: calc(100% / 3);
-		height: 18vh;
+		height: 15vh;
 	}
 }
