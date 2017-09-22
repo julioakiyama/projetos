@@ -154,6 +154,12 @@ button.equal:active {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+		display: flex;
+		justify-content: center;
+		vertical-align: center;
+	}
+  
   .key {
     display: flex;
     flex-wrap: wrap;
