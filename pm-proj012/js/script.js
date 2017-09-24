@@ -35,15 +35,12 @@ function handleClickC() {
   if ($buttonEqual.classList.contains('converted')) {
     $buttonEqual.classList.remove('converted', 'us-br');
     $buttonEqual.classList.add('select', 'br-us');
-    console.log($visor.className);
     if ($visor.classList.contains('result')) {
       $visor.classList.remove('result');
-      console.log($visor.className);
     }
   } else if ($buttonEqual.classList.contains('convert')) {
     $buttonEqual.classList.remove('convert');
     $buttonEqual.classList.add('select')
-    console.log($visor.className);
   }
   $value = $visor.value = 0;
 }
@@ -53,27 +50,20 @@ function handleClickEqual() {
     if ($buttonEqual.classList.contains('br-us')) {
       $buttonEqual.classList.remove('br-us');
       $buttonEqual.classList.add('us-br');
-      console.log($buttonEqual.className);
-      console.log($visor.className);
     } else {
       $buttonEqual.classList.remove('us-br');
       $buttonEqual.classList.add('br-us');
-      console.log($visor.className);
     }
   } else if ($buttonEqual.classList.contains('convert')) {
     $buttonEqual.classList.remove('convert')
     $buttonEqual.classList.add('converted')
-    console.log($visor.className);
-    console.log($buttonEqual.className);
     if ($buttonEqual.classList.contains('converted')) {
       if ($buttonEqual.classList.contains('br-us')) {
         $buttonEqual.classList.remove('br-us');
         $buttonEqual.classList.add('us-br');
-        console.log('funcao brus ' + $buttonEqual.className);
       } else if ($buttonEqual.classList.contains('us-br')) {
         $buttonEqual.classList.remove('us-br');
         $buttonEqual.classList.add('br-us');
-        console.log('funcao usbr');
       }
         gotData($displayValue);
     }
