@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+div#minimum-stock p,
+div#minimum-stock span {
+  color: #fff;
+  font-weight: 300;
+}
+
+p {
+  padding-left: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  max-width: 90%;
+  margin: 10px auto;
+}
+
+div#add-products,
+div#minimum-stock,
+div#arrow-save-item,
+div#plus-minus,
+div#trash-plus-minus {
+  display: flex;
+}
+
+input#input-products {
+  flex-grow: 2;
+  height: 70px;
+  outline: none;
+  padding-left: 30px;
+}
+
+button {
+  outline: none;
+  border-style: none;
+  cursor: pointer;
+  height: 70px;
+}
+
+button#add-item {
+  background-image: url("../img/save.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #3498db;
+  flex-grow: 1;
+}
+
+button.plus {
+  background-image: url("../img/plus.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #34495e;
+  width: calc(100% / 3);
+}
+
+button.minus {
+  background-image: url("../img/minus.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #34495e;
+  width: calc(100% / 3);
+}
+
+button#arrow {
+  background-image: url("../img/arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #34495e;
+  flex-grow: 1;
+}
+
+button#save-item {
+  background-image: url("../img/save.png");
+  background-repeat: no-repeat;
+  background-position: 25%;
+  background-color: #3498db;
+  flex-grow: 3;
+  color: #fff;
+  line-height: .9;
+}
+
+button#trash {
+  background-image: url("../img/trash.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #34495e;
+  width: calc(100% / 3);
+}
+
+div#minimum-stock {
+  background-color: #34495e;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div#plus-minus {
+  justify-content: space-around;
+  width: 50%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-flex;
+  padding: 0 60px 0 30px;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  border-bottom: 1px solid #ded8d8;
+}
+
+.minimum {
+  background-color: #ef3e3e;
+  color: #fff;
+}
+
+.stocked {
+  background-color: #ecf0f1;
+  color: #4a4a4a;
+}
+
+li sup {
+  font-size: 12px;
+  line-height: 0;
+  position: relative;
+  top: 2em;
+  left: .5em;
+}
+
+li span {
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
