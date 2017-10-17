@@ -9,34 +9,53 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<form>
-  <div id="add-products">
-    <input type="text" id="input-products" required>
-    <button id="add-item"></button>
-  </div>
-  <div id="minimum-stock">
-    <p>Estoque<br>Minimo</p>
-    <span>6</span>
-    <div id="plus-minus">
-      <button class="plus"></button>
-      <button class="minus"></button>
-    </div>
-  </div>
 
-  <div id="arrow-save-item">
-    <button id="arrow"></button>
-    <button id="save-item">Salve suas<br>Alterações</button>
-  </div>
-  <ul>
-    <li class="stocked">Tomates<sup>Min 4</sup><span>4</span></li>
-    <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
-    <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
-  </ul>
-  <div id="trash-plus-minus">
-    <button id="trash"></button>
-    <button class="plus"></button>
-    <button class="minus"></button>
-  </div>
-</form>
+  <form>
+    <div id="add-products-container" class="fixed">
+      <div id="add-products">
+        <input type="text" id="input-products" required>
+        <button id="add-item"></button>
+      </div>
+    </div>
+
+    <div id="arrow-save-item" class="fixed hidden">
+      <button id="arrow"></button>
+      <button id="save-item">Salve suas<br>Alterações</button>
+    </div>
+
+    <ul id="list-item">
+      <div id="minimum-stock">
+        <p>Estoque<br>Minimo</p>
+        <span>6</span>
+        <div id="plus-minus">
+          <button class="plus"></button>
+          <button class="minus"></button>
+        </div>
+      </div>
+
+      <li class="stocked">Tomates<sup>Min 4</sup><span>4</span></li>
+      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+
+      <li class="stocked">Tomates<sup>Min 4</sup><span>4</span></li>
+      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+
+      <li class="stocked">Tomates<sup>Min 4</sup><span>4</span></li>
+      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+
+      <li class="stocked">Tomates<sup>Min 4</sup><span>4</span></li>
+      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+
+      <div id="trash-plus-minus">
+        <button id="trash"></button>
+        <button class="plus"></button>
+        <button class="minus"></button>
+      </div>
+    </ul>
+
+  </form>
 </body>
 </html>

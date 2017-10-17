@@ -11,6 +11,15 @@ button {
   font-size: 20px;
 }
 
+body {
+  background-image: url("../img/cart.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  display: flex;
+  height: 100vh;
+}
+
 div#minimum-stock p,
 div#minimum-stock span {
   color: #fff;
@@ -24,17 +33,10 @@ p {
 form {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  max-width: 90%;
-  margin: 10px auto;
-}
-
-div#add-products,
-div#minimum-stock,
-div#arrow-save-item,
-div#plus-minus,
-div#trash-plus-minus {
-  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
 }
 
 input#input-products {
@@ -101,19 +103,33 @@ button#trash {
   width: calc(100% / 3);
 }
 
+div#add-products,
+div#arrow-save-item,
+div#trash-plus-minus {
+  display: flex;
+}
+
 div#minimum-stock {
+  display: flex;
   background-color: #34495e;
   justify-content: space-between;
   align-items: center;
 }
 
 div#plus-minus {
+  display: flex;
   justify-content: space-around;
   width: 50%;
 }
 
-ul {
+div#add-products-container {
+  display: flex;
+  flex-direction: column;
+}
+
+ul#list-item {
   list-style-type: none;
+  margin-top: 70px;
 }
 
 li {
@@ -145,6 +161,18 @@ li sup {
 
 li span {
   margin-left: auto;
+}
+
+.fixed {
+  position: fixed;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: inherit;
+  max-width: 900px;
+}
+
+.hidden {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
