@@ -5,7 +5,8 @@
 }
 
 body,
-button {
+button,
+input {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -30,13 +31,18 @@ p {
   padding-left: 30px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+div.wrapper {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   position: relative;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 70px;
 }
 
 input#input-products {
@@ -114,6 +120,7 @@ div#minimum-stock {
   background-color: #34495e;
   justify-content: space-between;
   align-items: center;
+  margin-top: 70px;
 }
 
 div#plus-minus {
@@ -127,17 +134,20 @@ div#add-products-container {
   flex-direction: column;
 }
 
+div#trash-plus-minus {
+  position: absolute;
+  width: 100%;
+}
+
 ul#list-item {
   list-style-type: none;
-  margin-top: 70px;
 }
 
 li {
   display: inline-flex;
-  padding: 0 60px 0 30px;
-  width: 100%;
+  padding: 20px 60px 20px 30px;
   height: 70px;
-  line-height: 70px;
+  width: 100%;
   border-bottom: 1px solid #ded8d8;
 }
 
@@ -155,7 +165,7 @@ li sup {
   font-size: 12px;
   line-height: 0;
   position: relative;
-  top: 2em;
+  top: 0em;
   left: .5em;
 }
 
@@ -165,7 +175,7 @@ li span {
 
 .fixed {
   position: fixed;
-  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   z-index: 10;
   width: inherit;
   max-width: 900px;

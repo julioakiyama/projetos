@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,54 +9,58 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <form>
-    <div id="add-products-container" class="fixed">
-      <div id="add-products">
-        <input type="text" id="input-products" required>
-        <button id="add-item"></button>
+  <div class='wrapper'>
+    <form>
+      <div id="add-products-container" class="fixed">
+        <div id="add-products">
+          <input type="text" id="input-products">
+          <button id="add-item"></button>
+        </div>
       </div>
-    </div>
 
-    <div id="arrow-save-item" class="fixed hidden">
-      <button id="arrow"></button>
-      <button id="save-item">Salve suas<br>Alterações</button>
-    </div>
+      <div id="arrow-save-item" class="fixed hidden">
+        <button id="arrow"></button>
+        <button id="save-item">Salve suas<br>Alterações</button>
+      </div>
 
-    <ul id="list-item">
-      <div id="minimum-stock">
+
+      <div id="minimum-stock" class="hidden fixed">
         <p>Estoque<br>Minimo</p>
-        <span>6</span>
+        <span id="minimum-amount">1</span>
         <div id="plus-minus">
           <button class="plus"></button>
           <button class="minus"></button>
         </div>
       </div>
+    </form>
 
-      <li class="stocked">Tomates<sup>Min 4</sup><span>4</span></li>
-      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
-      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+    <ul id="list-item">
 
-      <li class="stocked">Tomates<sup>Min 4</sup><span>4</span></li>
-      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
-      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
 
-      <li class="stocked">Tomates<sup>Min 4</sup><span>4</span></li>
+      <!--  <li class="stocked">Tomates<sup>Min 1</sup><span>0</span></li>
       <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
-      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+     <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
 
-      <li class="stocked">Tomates<sup>Min 4</sup><span>4</span></li>
-      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
-      <li class="minimum">Tomates<sup>Min 4</sup><span>4</span></li>
+    -->
 
-      <div id="trash-plus-minus">
-        <button id="trash"></button>
-        <button class="plus"></button>
-        <button class="minus"></button>
-      </div>
+
     </ul>
+    <div id="trash-plus-minus" class="hidden">
+      <button id="trash"></button>
+      <button class="plus"></button>
+      <button class="minus"></button>
+    </div>
+    <template>
+      <ul>
+        <li><sup></sup><span></span></li>
+      </ul>
+    </template>
+  </div>
 
-  </form>
+  <script src='js/script.js'></script>
 </body>
+
 </html>
