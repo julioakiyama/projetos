@@ -138,6 +138,7 @@ div#add-products-container {
 }
 
 div#trash-plus-minus {
+  display: none;
   position: absolute;
   //top: 140px;
   width: 100%;
@@ -150,7 +151,7 @@ ul#list-item {
 
 li {
   display: inline-flex;
-  padding: 20px 10% 20px 30px;
+  padding: 20px 60px 20px 30px;
   height: 70px;
   width: 100%;
   border-bottom: 1px solid $border-color;

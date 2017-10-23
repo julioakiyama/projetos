@@ -1,14 +1,32 @@
+const btnAddItem = document.querySelector('button#add-item');
+const btnMinIncrease = document.querySelector('button.plus');
+const btnMinDecrease = document.querySelector('button.minus');
+const btnStockIncrease = document.querySelector('div#trash-plus-minus button.plus');
+const btnStockDecrease = document.querySelector('div#trash-plus-minus button.minus');
+const btnArrowBack = document.querySelector('#arrow');
+const btnTrash = document.querySelector('#trash');
+const btnSave = document.querySelector('#save-item');
+const inputItem = document.querySelector('input#input-products');
+const minimumStockDiv = document.querySelector('#minimum-stock');
+const minimumAmount = document.querySelector('#minimum-amount');
+const listItem = document.querySelector('#list-item');
+const addOrDelete = document.querySelector('#trash-plus-minus');
+const saveItemAmount = document.querySelector('#arrow-save-item');
+let index;
 const items = JSON.parse(localStorage.getItem('items')) || [];
 
-function $(element) {
-  return document.querySelector(element);
-}
 
 function productList(plates = [], platesList) {
   platesList.innerHTML = plates.map((plate, i) => {
-    return `
-		<li class="minimum" data-index=${i}>${plate.li}<sup>Min ${plate.min}</sup> <span id=${i}>${plate.stocked}</span></li>
-		`;
+    if (items[i].stocked <= items[i].min) {
+      return `
+  		<li class="minimum" data-index=${i}>${plate.li}<sup>Min ${plate.min}</sup> <span id=${i}>${plate.stocked}</span></li>
+  		`
+    } else {
+      return `
+      <li class="stocked" data-index=${i}>${plate.li}<sup>Min ${plate.min}</sup> <span id=${i}>${plate.stocked}</span></li>
+      `
+    }
   }).join('');
 }
 
@@ -23,8 +41,8 @@ function Lists(li, min, stocked) {
     stocked
   };
   items.push(array);
-  productList(items, $('#list-item'));
-  localStorage.setItem('items', JSON.stringify(items));
+  productList(items, listItem);
+  save();
 }
 
 function capitalizeFirstLetter(string) {
@@ -32,73 +50,97 @@ function capitalizeFirstLetter(string) {
 }
 
 function inputItems() {
-  $('#minimum-stock').classList.remove('hidden');
+  minimumStockDiv.classList.remove('hidden');
 }
 
 function addItemBtn(e) {
   e.preventDefault();
-  let item = capitalizeFirstLetter($('input#input-products').value);
-  let minimumStock = $('#minimum-amount').innerHTML;
-  $('#minimum-stock').classList.add('hidden');
-  console.log(item, minimumStock);
+  let item = capitalizeFirstLetter(inputItem .value);
+  let minimumStock = minimumAmount.innerHTML;
+  minimumStockDiv.classList.add('hidden');
   list = new Lists(item, minimumStock);
-  $('input#input-products').value = '';
-  $('#minimum-amount').innerHTML = 1;
-  productList(items, $('#list-item'));
+  inputItem.value = '';
+  minimumAmount.innerHTML = 1;
+  productList(items, listItem);
 }
 
 function minStockIncrease(e) {
   e.preventDefault();
-  $('#minimum-amount').innerHTML++;
+  minimumAmount.innerHTML++;
   console.log('hi');
 }
 
 function minStockDecrease(e) {
   e.preventDefault();
-  if ($('#minimum-amount').innerHTML > 1) {
-    $('#minimum-amount').innerHTML--;
+  if (minimumAmount.innerHTML > 1) {
+    minimumAmount.innerHTML--;
   }
 }
 
-function back(e) {
-	e.preventDefault();
-	$('#trash-plus-minus').classList.add('hidden');
-	$('#arrow-save-item').classList.add('hidden');
+function hide() {
+  saveItemAmount.classList.toggle('hidden');
+  addOrDelete.style.display == 'flex' ? addOrDelete.style.display = 'none' : addOrDelete.style.display = 'flex';
 }
 
 function toggle(e) {
-	console.log(e.target);
+  if (!e.target.matches('li')) return;
   const el = e.target;
   const index = el.dataset.index;
+  console.log(index);
   let topOfItem = el.offsetTop;
   let heightOfItem = el.offsetHeight;
-  if ($('#trash-plus-minus').classList.contains('hidden') && (el.style.marginBottom = '0px')) {
-    $('#trash-plus-minus').classList.remove('hidden');
-    el.style.marginBottom = '70px';
-    $('#arrow-save-item').classList.remove('hidden');
-  } else {
-    $('#trash-plus-minus').classList.add('hidden');
-    el.style.marginBottom = '0px';
-    $('#arrow-save-item').classList.add('hidden');
-  };
-  $('#trash-plus-minus').style.top = topOfItem + heightOfItem + 'px';
-  localStorage.setItem('items', JSON.stringify(items));
-  productList(items, $('#list-item'));
+  addOrDelete.style.top = topOfItem + heightOfItem + 'px';
+  hide();
+  itemsIndex(index);
+  save();
+  productList(items, listItem);
 }
-// $('#trash-plus-minus').addEventListener('click', (e) => {
-// 	if (e.target.classList.contains('plus')) {
-// 		console.log('hi');
-// 		items[i].stocked++;
-// 		productList(items, $('#list-item'));
-// 	}
-// });
-// }
 
-$('button.minus').addEventListener('click', minStockDecrease);
-$('button.plus').addEventListener('click', minStockIncrease);
-$('#arrow').addEventListener('click', back);
-$('button#add-item').addEventListener('click', addItemBtn);
-$('input#input-products').addEventListener('click', inputItems);
-$('#list-item').addEventListener('click', toggle);
+function itemsIndex(i) {
+  index = i;
+  return index;
+}
 
-productList(items, $('#list-item'));
+function stockIncrease() {
+  items[index].stocked++;
+  productList(items, listItem);
+}
+
+function stockDecrease() {
+  if (items[index].stocked > 0) {
+    items[index].stocked--;
+  }
+  productList(items, listItem);
+}
+
+function removeItem() {
+  items.splice(index, 1)
+  hide();
+  save();
+  productList(items, listItem);
+}
+
+function back(e) {
+	//e.preventDefault();
+	addOrDelete.style.display = 'none';
+	saveItemAmount.classList.add('hidden');
+}
+
+function save() {
+  localStorage.setItem('items', JSON.stringify(items));
+}
+
+btnSave.addEventListener('click', save);
+btnTrash.addEventListener('click', removeItem);
+btnStockDecrease.addEventListener('click', stockDecrease);
+btnStockIncrease.addEventListener('click', stockIncrease);
+btnMinDecrease.addEventListener('click', minStockDecrease);
+btnMinIncrease.addEventListener('click', minStockIncrease);
+btnArrowBack.addEventListener('click', back);
+btnAddItem.addEventListener('click', addItemBtn);
+inputItem.addEventListener('click', inputItems);
+listItem.addEventListener('click', toggle);
+
+productList(items, listItem);
+//const eachItem = document.querySelector('#list-item li');
+//let stocked = document.querySelector('#list-item li span');
