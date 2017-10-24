@@ -152,6 +152,7 @@ ul#list-item {
 li {
   display: inline-flex;
   padding: 20px 60px 20px 30px;
+  cursor: pointer;
   height: 70px;
   width: 100%;
   border-bottom: 1px solid $border-color;
