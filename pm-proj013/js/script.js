@@ -13,7 +13,7 @@ const listItem = document.querySelector('#list-item');
 const addOrDelete = document.querySelector('#trash-plus-minus');
 const saveItemAmount = document.querySelector('#arrow-save-item');
 let index;
-const items = JSON.parse(localStorage.getItem('items')) || [];
+let items = JSON.parse(localStorage.getItem('items')) || [];
 
 
 function productList(plates = [], platesList) {
@@ -34,7 +34,6 @@ function Lists(li, min, stocked) {
   this.item = li;
   this.minimum = min;
   this.stocked = stocked;
-  stocked = 0;
   const array = {
     li,
     min,
@@ -43,6 +42,16 @@ function Lists(li, min, stocked) {
   items.push(array);
   productList(items, listItem);
   save();
+}
+
+function toggle(e) {
+  if (!e.target.matches('li')) return;
+  const el = e.target;
+  index = el.dataset.index;
+  let topOfItem = el.offsetTop;
+  let heightOfItem = el.offsetHeight;
+  addOrDelete.style.top = topOfItem + heightOfItem + 'px';
+  showSaveAndTrashBar();
 }
 
 function capitalizeFirstLetter(string) {
@@ -55,13 +64,13 @@ function inputItems() {
 
 function addItemBtn(e) {
   e.preventDefault();
-  let item = capitalizeFirstLetter(inputItem .value);
+  let item = capitalizeFirstLetter(inputItem.value);
   let minimumStock = minimumAmount.innerHTML;
+  stock = 0;
   minimumStockDiv.classList.add('hidden');
-  list = new Lists(item, minimumStock);
+  list = new Lists(item, minimumStock, stock);
   inputItem.value = '';
   minimumAmount.innerHTML = 1;
-  productList(items, listItem);
 }
 
 function minStockIncrease(e) {
@@ -76,35 +85,6 @@ function minStockDecrease(e) {
   }
 }
 
-function hide() {
-  saveItemAmount.classList.remove('hidden');
-  addOrDelete.style.display = 'flex';
-  minimumStockDiv.classList.add('hidden');
-}
-
-function hideSaveAndTrashBar() {
-  saveItemAmount.classList.add('hidden');
-  addOrDelete.style.display = 'none';
-}
-
-function toggle(e) {
-  if (!e.target.matches('li')) return;
-  const el = e.target;
-  index = el.dataset.index;
-  let topOfItem = el.offsetTop;
-  let heightOfItem = el.offsetHeight;
-  addOrDelete.style.top = topOfItem + heightOfItem + 'px';
-  hide();
-  //itemsIndex(index);
-  save();
-  productList(items, listItem);
-}
-
-// function itemsIndex(i) {
-//   index = i;
-//   return index;
-// }
-
 function stockIncrease() {
   items[index].stocked++;
   productList(items, listItem);
@@ -118,15 +98,27 @@ function stockDecrease() {
 }
 
 function removeItem() {
-  items.splice(index, 1)
+  items.splice(index, 1);
   hideSaveAndTrashBar();
   save();
   productList(items, listItem);
 }
 
-function back(e) {
-	//e.preventDefault();
+function showSaveAndTrashBar() {
+  saveItemAmount.classList.remove('hidden');
+  addOrDelete.style.display = 'flex';
+}
+
+function hideSaveAndTrashBar() {
+  addOrDelete.style.display = 'none';
+  saveItemAmount.classList.add('hidden');
+}
+
+function backToLastState(e) {
+	e.preventDefault();
   hideSaveAndTrashBar();
+  items = JSON.parse(localStorage.getItem('items'));
+  productList(items, listItem);
 }
 
 function saveAmount(e) {
@@ -145,11 +137,9 @@ btnStockDecrease.addEventListener('click', stockDecrease);
 btnStockIncrease.addEventListener('click', stockIncrease);
 btnMinDecrease.addEventListener('click', minStockDecrease);
 btnMinIncrease.addEventListener('click', minStockIncrease);
-btnArrowBack.addEventListener('click', back);
+btnArrowBack.addEventListener('click', backToLastState);
 btnAddItem.addEventListener('click', addItemBtn);
 inputItem.addEventListener('click', inputItems);
 listItem.addEventListener('click', toggle);
 
 productList(items, listItem);
-//const eachItem = document.querySelector('#list-item li');
-//let stocked = document.querySelector('#list-item li span');

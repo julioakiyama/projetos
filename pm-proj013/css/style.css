@@ -152,14 +152,17 @@ li {
   width: 100%;
   border-bottom: 1px solid #ded8d8;
 }
+li:hover {
+  text-transform: uppercase;
+}
 
 .minimum {
-  background-color: #ef3e3e;
+  background: linear-gradient(to bottom, #ef3e3e 0%, #a61a0d 100%);
   color: #fff;
 }
 
 .stocked {
-  background-color: #ecf0f1;
+  background: linear-gradient(to bottom, #ecf0f1 0%, #9fa6a8 100%);
   color: #4a4a4a;
 }
 
