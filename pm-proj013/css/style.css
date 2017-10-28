@@ -13,12 +13,12 @@ input {
 }
 
 body {
-  background-image: url("../img/cart.png");
+  background-image: url("../img/cart.png"), linear-gradient(to bottom, #fff 0%, #cccccc 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fff;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 div#minimum-stock p,
@@ -46,10 +46,16 @@ form {
 }
 
 input#input-products {
-  flex-grow: 2;
+  width: 100%;
   height: 70px;
   outline: none;
   padding-left: 30px;
+  background-color: #ffffe0;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #fff, 0 1px 0 #fff;
 }
 
 button {
@@ -60,15 +66,15 @@ button {
 }
 
 button#add-item {
-  background-image: url("../img/save.png");
+  background-image: url("../img/save.png"), linear-gradient(to bottom, #3498db 0%, #196090 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #3498db;
-  flex-grow: 1;
+  width: 150px;
 }
 
 button.plus {
-  background-image: url("../img/plus.png");
+  background-image: url("../img/plus.png"), linear-gradient(to bottom, #34495e 0%, #10161c 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #34495e;
@@ -76,7 +82,7 @@ button.plus {
 }
 
 button.minus {
-  background-image: url("../img/minus.png");
+  background-image: url("../img/minus.png"), linear-gradient(to bottom, #34495e 0%, #10161c 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #34495e;
@@ -84,7 +90,7 @@ button.minus {
 }
 
 button#arrow {
-  background-image: url("../img/arrow.png");
+  background-image: url("../img/arrow.png"), linear-gradient(to bottom, #34495e 0%, #10161c 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #34495e;
@@ -92,7 +98,7 @@ button#arrow {
 }
 
 button#save-item {
-  background-image: url("../img/save.png");
+  background-image: url("../img/save.png"), linear-gradient(to bottom, #3498db 0%, #196090 100%);
   background-repeat: no-repeat;
   background-position: 25%;
   background-color: #3498db;
@@ -102,7 +108,7 @@ button#save-item {
 }
 
 button#trash {
-  background-image: url("../img/trash.png");
+  background-image: url("../img/trash.png"), linear-gradient(to bottom, #34495e 0%, #10161c 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #34495e;
@@ -157,13 +163,19 @@ li:hover {
 }
 
 .minimum {
-  background: linear-gradient(to bottom, #ef3e3e 0%, #a61a0d 100%);
+  background: linear-gradient(to bottom, #ef3e3e 0%, #b80f0f 100%);
   color: #fff;
+}
+.minimum:hover {
+  background: linear-gradient(to bottom, #e71313 0%, #a00d0d 100%);
 }
 
 .stocked {
-  background: linear-gradient(to bottom, #ecf0f1 0%, #9fa6a8 100%);
+  background: linear-gradient(to bottom, #ecf0f1 0%, #b1c2c6 100%);
   color: #4a4a4a;
+}
+.stocked:hover {
+  background: linear-gradient(to bottom, #cfd9db 0%, #a3b6bb 100%);
 }
 
 li sup {
