@@ -123,7 +123,7 @@ div#trash-plus-minus {
 
 div#minimum-stock {
   display: flex;
-  background-color: #34495e;
+  background-image: linear-gradient(to bottom, #34495e 0%, #10161c 100%);
   justify-content: space-between;
   align-items: center;
   margin-top: 70px;

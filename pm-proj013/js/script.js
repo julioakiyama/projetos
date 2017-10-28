@@ -51,6 +51,7 @@ function toggle(e) {
   let topOfItem = el.offsetTop;
   let heightOfItem = el.offsetHeight;
   addOrDelete.style.top = topOfItem + heightOfItem + 'px';
+  minimumStockDiv.classList.add('hidden');
   showSaveAndTrashBar();
 }
 
@@ -64,6 +65,7 @@ function inputItems() {
 
 function addItemBtn(e) {
   e.preventDefault();
+  if (inputItem.value === '') return;
   let item = capitalizeFirstLetter(inputItem.value);
   let minimumStock = minimumAmount.innerHTML;
   stock = 0;
